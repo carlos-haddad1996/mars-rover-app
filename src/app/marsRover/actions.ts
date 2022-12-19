@@ -46,7 +46,6 @@ export function getByEarthDate(
 ) => Promise<void> {
     return async (dispatch, getState) => {
         try {
-            console.log({ date });
             const { data } = await axios.get<MarsRover>(
                 `${MARS_API_URL}/${roversName}/photos?earth_date=${date}&api_key=DEMO_KEY`,
                 {
